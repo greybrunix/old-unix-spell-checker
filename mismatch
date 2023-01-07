@@ -1,3 +1,5 @@
-#!/usr/bin/env sh
+#! /bin/sh
 
-comm -13 /usr/share/dict/words -
+mkfifo tmp
+sort /usr/share/dict/words > tmp &
+comm -13 tmp -
