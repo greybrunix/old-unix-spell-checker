@@ -3,3 +3,4 @@
 mkfifo tmp
 sort /usr/share/dict/words > tmp &
 comm -13 tmp -
+rm tmp &
